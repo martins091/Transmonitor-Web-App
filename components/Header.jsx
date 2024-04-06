@@ -3,7 +3,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className="w-full h-16 z-20 fixed bg-white shadow-md flex items-center justify-between px-8 header-container">
+    <div className="w-full h-16 z-40 fixed bg-white shadow-md flex items-center justify-between px-8 header-container">
       <div className="flex items-center gap-40 ">
         <h1 className="text-[#1875F0] font-bold text-2xl">TransMonitor</h1>
         <div className="flex items-center gap-6 text-[#979797]">

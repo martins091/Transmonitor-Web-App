@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Chart from "./OverviewItems/Chart";
+import Payments from "./OverviewItems/Payments";
 
 const Overview = () => {
   return (
@@ -66,6 +67,7 @@ const Overview = () => {
       </div>
 
       <Chart />
+      <Payments />
     </div>
   );
 };
