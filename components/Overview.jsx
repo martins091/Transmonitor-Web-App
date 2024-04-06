@@ -6,7 +6,7 @@ const Overview = () => {
     <div className=" mt-24 z-30 ml-72 mr-10 w-full">
       <div className="">
         <div className="flex space-x-3">
-          <div className="bg-white text-gray-500 flex space-x-3 w-60 pl-4 py-3">
+          <div className="bg-white text-gray-500 flex space-x-3 w-64 pl-4 py-3">
             <div>
               <p className="text-xs">Daily Transaction Volume</p>
               <h1 className="text-[#262626]">2,342</h1>
