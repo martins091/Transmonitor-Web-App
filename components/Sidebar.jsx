@@ -13,7 +13,7 @@ const Sidebar = () => {
       <div>
         <div className="text-[#647787] ">
           <div>
-            <button className="bg-[#27AE60] py-3 rounded-full px-6 text-white font-medium cursor-pointer">
+            <button className="bg-[#27AE60] py-3 rounded-full px-8 text-white font-medium cursor-pointer">
               GENERATE INVOICE
             </button>
             <p className="mt-10 cursor-pointer">Main</p>

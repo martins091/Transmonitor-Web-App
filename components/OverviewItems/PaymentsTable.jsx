@@ -17,6 +17,9 @@ const customStyles = {
   control: (provided) => ({
     ...provided,
     backgroundColor: "#F3F4F6",
+    width: '160px',
+    cursor: 'pointer',
+    
   }),
   option: (provided, state) => ({
     ...provided,
@@ -68,7 +71,7 @@ const PaymentsTable = () => {
         <div className="flex space-x-2 justify-center items-center pr-20">
           <p>Show</p>
           <Select
-            className="py-2 px-4 w-full"
+            className="py-2 px-2 w-full"
             options={options}
             styles={customStyles}
           />

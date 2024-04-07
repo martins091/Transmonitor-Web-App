@@ -1,5 +1,6 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -27,16 +28,20 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center space-x-4">
           <div>
-            <p className="text-[#647787] text-right text-xs">Hello</p>
-            <h1 className="font-medium text-sm text-[#647787]">Oluwaleke Ojo</h1>
+            <p className="text-[#647787] font-normal text-right text-xs">Hello</p>
+            <h1 className="font-medium text-sm text-[#647787]">
+              Oluwaleke Ojo
+            </h1>
           </div>
           <div>
-            <img
-              src="images/profile.jpeg"
-              alt="profile"
-              className="h-10 w-10 rounded-full"
+            <Image
+              src="/images/profil.PNG"
+              width={40}
+              height={40}
+              className="rounded-full object-cover"
+              alt="Your SVG"
             />
           </div>
         </div>
