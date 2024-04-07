@@ -2,6 +2,7 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Image from "next/image";
+// import MyChart from "./Mychart";
 
 const Chart = () => {
   return (
@@ -12,12 +13,12 @@ const Chart = () => {
             <div>
               <h1 className="font-semibold">Today: 5, Aug 2018</h1>
             </div>
-            <div className="flex space-x-4 justify-center items-center">
+            <div className="flex space-x-8 items-center">
               <div className="flex space-x-4 rounded-md py-1 justify-center items-center border text-gray-400 text-sx px-2 cursor-pointer">
                 <p>1 Jan - 1 Jun</p>
                 <RiArrowDownSLine />
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2  ">
                 <div className="border px-2 py-1 rounded-md cursor-pointer bg-[#FBFCFD]">
                   <RiArrowLeftSLine className="text-[#CED0DA]" />
                 </div>
@@ -27,14 +28,25 @@ const Chart = () => {
               </div>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full relative">
             <Image
               src="/chartbg.svg"
               layout="fixed"
-              width={600}
-              height={600}
+              width={650}
+              height={650}
               alt="Your SVG"
             />
+            <div className="absolute top-0">
+              {/* <MyChart /> */}
+              <div className="flex space-x-20 font-bold text-sm">
+                <p className="ml-4">Jan</p>
+                <p>Feb</p>
+                <p>Mar</p>
+                <p>Apr</p>
+                <p>May</p>
+                <p className="">Jun</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

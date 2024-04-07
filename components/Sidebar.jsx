@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <div className="fixed left-0 h-100 w-80 bg-white pt-10 pl-8 -mt-2 -ml-8 pr-4 pb-16 text-[#647787] sidebar-container">
+    <div className="fixed left-0 h-100 w-80 bg-white pt-10 pl-8 -mt-2 -ml-8 pr-4 pb-20 text-[#647787] sidebar-container">
       <div>
         <div className="text-[#647787] ">
           <div>

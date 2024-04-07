@@ -1,80 +1,33 @@
+"use client";
+
 import { RiArrowDownSLine } from "react-icons/ri";
 import { AiOutlineSearch } from "react-icons/ai";
+import Select from "react-select";
+import payments from "/data/Payments";
 
-const Payments = () => {
-  // Hard-coded payment data
-  const payments = [
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Reconcilled",
+const options = [
+  { value: "", label: "All" },
+  { value: "reconciled", label: "Reconcilled" },
+  { value: "unreconciled", label: "Un-reconcilled" },
+  { value: "settled", label: "Settled" },
+  { value: "unsettled", label: "Unsettled" },
+];
+
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    backgroundColor: "#F3F4F6",
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isFocused ? "#F4F4F4" : "white",
+    "&:hover": {
+      backgroundColor: "#F4F4F4",
     },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Pending",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Reconcilled",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Reconcilled",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Pending",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Un-reconcilled",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Reconcilled",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Un-reconcilled",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Pending",
-    },
-    {
-      itemType: "Apple Mac Book 15” 250 SSD 12GB",
-      price: "$73430",
-      transactionNo: "1234567890",
-      time: "12:30",
-      order: "Reconcilled",
-    },
-  ];
+  }),
+};
+
+const PaymentsTable = () => {
   const getOrderStatusColor = (order) => {
     switch (order) {
       case "Reconcilled":
@@ -112,15 +65,13 @@ const Payments = () => {
             />
           </div>
         </div>
-        <div className="flex space-x-4 justify-center items-center pr-20">
+        <div className="flex space-x-2 justify-center items-center pr-20">
           <p>Show</p>
-          <select className="py-2 px-4 border-2 w-full bg-[#F3F4F6]">
-            <option value="">All</option>
-            <option value="">Reconcilled</option>
-            <option value="">Un-reconcilled</option>
-            <option value="">Settled</option>
-            <option value="">Unsettled</option>
-          </select>
+          <Select
+            className="py-2 px-4 w-full"
+            options={options}
+            styles={customStyles}
+          />
         </div>
       </div>
       <table className="w-full rounded text-left font-light mt-4 text-[#979797] font-sm">
@@ -157,14 +108,26 @@ const Payments = () => {
               <td className="py-4">{payment.transactionNo}</td>
               <td className="py-4 ">{payment.time}</td>
               <td className="py-4 w-48">
-  <div className="flex justify-center items-center space-x-2 border-2 mr-8 border-[#CCCFD4] rounded-full py-2">
-    <div>
-      <p className="w-3 -ml-4 rounded-full h-3" style={{ backgroundColor: getOrderStatusColor(payment.order).bgColor }}></p>
-    </div>
-    <div className={`text-sm`} style={{ color: getOrderStatusColor(payment.order).textColor }}>{payment.order}</div>
-  </div>
-</td>
-
+                <div className="flex justify-center items-center space-x-2 border-2 mr-8 border-[#CCCFD4] rounded-full py-2">
+                  <div>
+                    <p
+                      className="w-3 -ml-4 rounded-full h-3"
+                      style={{
+                        backgroundColor: getOrderStatusColor(payment.order)
+                          .bgColor,
+                      }}
+                    ></p>
+                  </div>
+                  <div
+                    className={`text-sm`}
+                    style={{
+                      color: getOrderStatusColor(payment.order).textColor,
+                    }}
+                  >
+                    {payment.order}
+                  </div>
+                </div>
+              </td>
 
               <td className="py-4 cursor-pointer">
                 <RiArrowDownSLine size={30} />
@@ -175,13 +138,13 @@ const Payments = () => {
       </table>
       <div className="flex justify-between my-5">
         <div className="">
-          <h1>
-          Showing 1 to 10 of 500 entries
-          </h1>
+          <h1>Showing 1 to 10 of 500 entries</h1>
         </div>
         <div className="flex">
           <p className="px-2 border py-1 cursor-pointer">Previous</p>
-          <p className="px-2 border py-1 bg-[#1875F0] text-white cursor-pointer">1</p>
+          <p className="px-2 border py-1 bg-[#1875F0] text-white cursor-pointer">
+            1
+          </p>
           <p className="px-2 border py-1 cursor-pointer">2</p>
           <p className="px-2 border py-1 cursor-pointer">Next</p>
         </div>
@@ -190,4 +153,4 @@ const Payments = () => {
   );
 };
 
-export default Payments;
+export default PaymentsTable;

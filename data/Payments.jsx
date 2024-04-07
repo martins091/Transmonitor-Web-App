@@ -1,0 +1,73 @@
+const payments = [
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Un-reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Un-reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+  ];
+  export default payments;

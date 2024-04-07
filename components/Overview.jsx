@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Chart from "./OverviewItems/Chart";
-import Payments from "./OverviewItems/Payments";
+import Payments from "./OverviewItems/PaymentsTable";
 
 const Overview = () => {
   return (
@@ -24,7 +24,6 @@ const Overview = () => {
             <div>
               <p className="text-xs">Daily Transaction Value</p>
               <h1 className="text-[#262626]">₦4,000,000</h1>
-
             </div>
             <Image
               src="/smallchart.svg"

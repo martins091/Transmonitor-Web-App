@@ -12,6 +12,40 @@
   .header-container {
     transform: scale(1.0); 
   }
+  .chart-container {
+    position: relative;
+    background-image: url('/chartbg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200%;
+    height: 200%;
+  }
+
+  @font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
   
   
   
