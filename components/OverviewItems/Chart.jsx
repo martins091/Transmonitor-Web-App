@@ -29,7 +29,7 @@ const Chart = () => {
           </div>
           <div className="w-full">
             <Image
-              src="/images/chart.PNG"
+              src="/chartbg.svg"
               layout="fixed"
               width={600}
               height={600}

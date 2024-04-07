@@ -1,82 +1,92 @@
 import { RiArrowDownSLine } from "react-icons/ri";
 import { AiOutlineSearch } from "react-icons/ai";
 
-
 const Payments = () => {
   // Hard-coded payment data
   const payments = [
     {
-      itemType: "Item 1",
-      price: 100,
-      transactionNo: "123456",
-      time: "10:00 AM",
-      order: "Reconciled",
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
     },
     {
-      itemType: "Item 2",
-      price: 200,
-      transactionNo: "789012",
-      time: "11:00 AM",
-      order: "Reconciled",
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
     },
     {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-      {
-        itemType: "Item 2",
-        price: 200,
-        transactionNo: "789012",
-        time: "11:00 AM",
-        order: "Reconciled",
-      },
-    // Add more payment data...
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Un-reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Un-reconcilled",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Pending",
+    },
+    {
+      itemType: "Apple Mac Book 15” 250 SSD 12GB",
+      price: "$73430",
+      transactionNo: "1234567890",
+      time: "12:30",
+      order: "Reconcilled",
+    },
   ];
+  const getOrderStatusColor = (order) => {
+    switch (order) {
+      case "Reconcilled":
+        return { textColor: "#27AE60", bgColor: "#27AE60" };
+      case "Pending":
+        return { textColor: "#EBC315", bgColor: "#EBC315" };
+      case "Un-reconcilled":
+        return { textColor: "#C4C4C4", bgColor: "#C4C4C4" };
+      default:
+        return { textColor: "", bgColor: "" };
+    }
+  };
 
   return (
     <div className="mt-4">
@@ -102,9 +112,9 @@ const Payments = () => {
             />
           </div>
         </div>
-        <div className="flex space-x-4 justify-center items-center">
+        <div className="flex space-x-4 justify-center items-center pr-20">
           <p>Show</p>
-          <select className="p-2">
+          <select className="py-2 px-4 border-2 w-full bg-[#F3F4F6]">
             <option value="">All</option>
             <option value="">Reconcilled</option>
             <option value="">Un-reconcilled</option>
@@ -116,39 +126,66 @@ const Payments = () => {
       <table className="w-full rounded text-left font-light mt-4 text-[#979797] font-sm">
         <thead className="bg-[#EAEEF0] text-left">
           <tr className="border-b">
-            <th scope="col" className="py-3 pl-4 w-1/5 font-normal">
+            <th scope="col" className="py-4 pl-6 font-normal">
               Item Type
             </th>
-            <th scope="col" className="py-3 w-1/5 font-normal">
+            <th scope="col" className="py-4 font-normal">
               Price
             </th>
-            <th scope="col" className="py-3 w-1/5 font-normal">
+            <th scope="col" className="py-4 font-normal">
               Transaction No
             </th>
-            <th scope="col" className="py-3 w-1/5 font-normal">
+            <th scope="col" className="py-4 font-normal">
               Time
             </th>
-            <th scope="col" className="py-3 w-1/5 font-normal">
+            <th scope="col" className="py-4 font-normal">
               Order
             </th>
+            <th scope="col" className="py43 font-normal"></th>
           </tr>
         </thead>
         <tbody className="bg-white">
           {payments.map((payment, index) => (
             <tr key={index} className="border-b">
-              <td className="py-3 pl-4 w-1/5">{payment.itemType}</td>
-              <td className="py-3 w-1/5">{payment.price}</td>
-              <td className="py-3 w-1/5">{payment.transactionNo}</td>
-              <td className="py-3 w-1/5">{payment.time}</td>
-              <td className="py-3 w-1/5 flex">
-                <span>{payment.order}</span>
-                <RiArrowDownSLine size={24} color="green" />
+              <td className="py-4 flex justify-center items-center space-x-4">
+                <div className="w-8 h-8 flex justify-center items-center rounded-full -ml-14 bg-[#7F8FA4] text-xs text-white">
+                  VW
+                </div>
+                <div className="text-[#414042]"> {payment.itemType}</div>
+              </td>
+              <td className="py-4">{payment.price}</td>
+              <td className="py-4">{payment.transactionNo}</td>
+              <td className="py-4 ">{payment.time}</td>
+              <td className="py-4 w-48">
+  <div className="flex justify-center items-center space-x-2 border-2 mr-8 border-[#CCCFD4] rounded-full py-2">
+    <div>
+      <p className="w-3 -ml-4 rounded-full h-3" style={{ backgroundColor: getOrderStatusColor(payment.order).bgColor }}></p>
+    </div>
+    <div className={`text-sm`} style={{ color: getOrderStatusColor(payment.order).textColor }}>{payment.order}</div>
+  </div>
+</td>
 
+
+              <td className="py-4 cursor-pointer">
+                <RiArrowDownSLine size={30} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <div className="flex justify-between my-5">
+        <div className="">
+          <h1>
+          Showing 1 to 10 of 500 entries
+          </h1>
+        </div>
+        <div className="flex">
+          <p className="px-2 border py-1 cursor-pointer">Previous</p>
+          <p className="px-2 border py-1 bg-[#1875F0] text-white cursor-pointer">1</p>
+          <p className="px-2 border py-1 cursor-pointer">2</p>
+          <p className="px-2 border py-1 cursor-pointer">Next</p>
+        </div>
+      </div>
     </div>
   );
 };
